@@ -280,7 +280,7 @@ alias pkg\?='pacman -Q | grep -v grep | grep "$@"'
 # --- end grepping }}}
 # --- ip {{{
 
-alias localip='hostname -i'
+alias localip='inetutils-ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | grep -Eo "([0-9]*\.){3}[0-9]*" | grep -v "127.0.0.1"'
 alias publicip='drill -V 3 myip.opendns.com @resolver1.opendns.com | grep IN | tail -n 1 | cut -f5 -s'
 
 # --- end ip }}}
