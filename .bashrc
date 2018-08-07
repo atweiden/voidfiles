@@ -468,6 +468,14 @@ for _fn in $(find "$HOME/.functions.d" -type f -name "*.sh"); do source "$_fn"; 
 
 # end completions }}}
 # ==============================================================================
+# voidinfo {{{
+
+if [[ -x "$HOME/.bin/voidinfo" ]]; then
+  if ! [[ "$UID" == '0' ]]; then voidinfo; else voidinfo -c red; fi
+fi
+
+# end voidinfo }}}
+# ==============================================================================
 # beam {{{
 
 # enable repl history
