@@ -1,3 +1,0 @@
-#!/bin/bash
-SSH_SESSIONS="$(/usr/bin/pgrep -f 'sshd:')"
-if [[ -n "$SSH_SESSIONS" ]]; then /usr/bin/kill -TERM "$SSH_SESSIONS"; fi

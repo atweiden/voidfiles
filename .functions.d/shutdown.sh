@@ -12,7 +12,7 @@ _quixand_down() {
 
 slam() {
   [[ -x '/usr/bin/quixand' ]] && _quixand_down
-  sudo shutdown now
+  sudo shutdown -h now
 }
 
 slur() {

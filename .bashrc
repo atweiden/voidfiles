@@ -143,11 +143,6 @@ PATH="/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin"
 PATH="$HOME/.bin:$PATH"
 
 # --- end dotfiles }}}
-# --- perl {{{
-
-PATH="/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/bin/site_perl:$PATH"
-
-# --- end perl }}}
 # --- perl6 {{{
 
 PATH="/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin:$PATH"
@@ -181,7 +176,6 @@ _has_rlwrap=$(command -v rlwrap)
 _has_sqlite3=$(command -v sqlite3)
 _has_subgit=$(command -v subgit)
 _has_subhg=$(command -v subhg)
-_has_systemctl=$(command -v systemctl)
 _has_tree=$(command -v tree)
 _has_vim=$(command -v vim)
 _has_wget=$(command -v wget)
@@ -272,7 +266,7 @@ alias egrep='egrep --ignore-case --color=auto'
 alias h\?='history | grep -v -E "grep|h\?" | grep "$@"'
 alias ls\?='ls -1F | grep "$@"'
 alias ps\?='ps -a -x -f | grep -v grep | grep "$@"'
-alias pkg\?='pacman -Q | grep -v grep | grep "$@"'
+alias pkg\?='xbps-query --search "$@"'
 [[ -n "$_has_ack" ]] && alias ack='ack --ackrc=$HOME/.config/ack/ackrc'
 [[ -n "$_has_ag" ]] && alias ag='ag --hidden --smart-case --skip-vcs-ignores'
 [[ -n "$_has_locate" ]] && alias locate='locate --ignore-case'
@@ -307,11 +301,6 @@ alias publicip='drill -V 3 myip.opendns.com @resolver1.opendns.com | grep IN | t
 # --- --- end perl6 }}}
 
 # --- end languages }}}
-# --- pacman {{{
-
-[[ -n "$_has_makepkg" ]] && alias mksrcinfo='makepkg --printsrcinfo >| .SRCINFO'
-
-# --- end pacman }}}
 # --- path {{{
 
 alias path='echo -e ${PATH//:/\\n}'
@@ -350,11 +339,6 @@ alias rm='rm -i'
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # --- end stopwatch }}}
-# --- systemctl {{{
-
-[[ -n "$_has_systemctl" ]] && alias userctl='systemctl --user'
-
-# --- end systemctl }}}
 # --- text {{{
 
 alias hr='printf "$(printf "\e["$(shuf -i 91-97 -n 1)";1m%%%ds\e[0m\n" "$(tput cols)")" | tr " " ='
@@ -483,14 +467,6 @@ for _fn in $(find "$HOME/.functions.d" -type f -name "*.sh"); do source "$_fn"; 
   && source /usr/share/bash-completion/bash_completion
 
 # end completions }}}
-# ==============================================================================
-# archinfo {{{
-
-if [[ -x "$HOME/.bin/archinfo" ]]; then
-  if ! [[ "$UID" == '0' ]]; then archinfo; else archinfo -c red; fi
-fi
-
-# end archinfo }}}
 # ==============================================================================
 # beam {{{
 

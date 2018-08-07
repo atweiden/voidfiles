@@ -3,9 +3,9 @@
 ttyfiles
 ========
 
-vim, tmux and fzf config for arch tty
+vim, tmux and fzf config for void tty
 
-- based on pacfiles [1]
+- based on ttyfiles [1]
 
 
 Licensing
@@ -17,4 +17,4 @@ information, see http://unlicense.org/ or the accompanying UNLICENSE file.
 
 ******************************************************************************
 
-[1] https://github.com/atweiden/pacfiles
+[1] https://github.com/atweiden/ttyfiles
