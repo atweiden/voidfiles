@@ -43,5 +43,5 @@ done
 wait
 for _keyid in "${_keyids[@]}"; do
   _key="${_keydir}/${_keyid}.asc"
-  gpg --import "$_key"
+  gpg2 --import "$_key"
 done
