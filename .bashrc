@@ -526,8 +526,8 @@ export FZF_DEFAULT_OPTS='
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden --bind ?:toggle-preview"
 
 # create fzf key bindings
-[[ -e "/etc/profile.d/fzf.bash" ]] && source /etc/profile.d/fzf.bash
-[[ -e "/etc/profile.d/fzf-extras.bash" ]] && source /etc/profile.d/fzf-extras.bash
+[[ -e "/usr/share/doc/key-bindings/fzf.bash" ]] && source /usr/share/doc/key-bindings/fzf.bash
+[[ -e "$HOME/.fzf-extras/fzf-extras.sh" ]] && source "$HOME/.fzf-extras/fzf-extras.sh"
 
 # end fzf }}}
 # ==============================================================================
