@@ -553,5 +553,11 @@ export PGSERVICEFILE="$HOME/.config/pg/pg_service.conf"
 
 # end pg }}}
 # ==============================================================================
+# xtools {{{
+
+export XLOCATE_GIT="$HOME/.config/xtools/xlocate.git"
+
+# end xtools }}}
+# ==============================================================================
 
 # vim: set filetype=sh foldmethod=marker foldlevel=0 nowrap:
