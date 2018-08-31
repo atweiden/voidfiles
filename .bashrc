@@ -526,9 +526,15 @@ export FZF_DEFAULT_OPTS='
   && export FZF_CTRL_T_OPTS="--preview '(cat {} || tree -C {}) 2> /dev/null | head -200'"
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden --bind ?:toggle-preview"
 
+# source fzf completions
+[[ -f /usr/share/bash-completion/completions/fzf ]] \
+  && source /usr/share/bash-completion/completions/fzf
+
 # create fzf key bindings
-[[ -e "/usr/share/doc/key-bindings/fzf.bash" ]] && source /usr/share/doc/key-bindings/fzf.bash
-[[ -e "$HOME/.fzf-extras/fzf-extras.sh" ]] && source "$HOME/.fzf-extras/fzf-extras.sh"
+[[ -e "/usr/share/doc/key-bindings/fzf.bash" ]] \
+  && source /usr/share/doc/key-bindings/fzf.bash
+[[ -e "$HOME/.fzf-extras/fzf-extras.sh" ]] \
+  && source "$HOME/.fzf-extras/fzf-extras.sh"
 
 # end fzf }}}
 # ==============================================================================
