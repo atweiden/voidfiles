@@ -58,8 +58,8 @@ done
 # settings
 # -----------------------------------------------------------------------------
 
-name="${_name:-Andy Weidenbaum}"       # Name    (GitHub/AUR)
-email="${_email:-archbaum@gmail.com}"  # Email   (GitHub/AUR)
+name="${_name:-Andy Weidenbaum}"       # Name    (GitHub)
+email="${_email:-archbaum@gmail.com}"  # Email   (GitHub)
 github="${_github:-atweiden}"          # Account (GitHub)
 
 
