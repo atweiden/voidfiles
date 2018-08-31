@@ -529,11 +529,11 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden --bin
 # source fzf completions
 [[ -f /usr/share/bash-completion/completions/fzf ]] \
   && source /usr/share/bash-completion/completions/fzf
-
-# create fzf key bindings
-[[ -e "/usr/share/doc/key-bindings/fzf.bash" ]] \
-  && source /usr/share/doc/key-bindings/fzf.bash
-[[ -e "$HOME/.fzf-extras/fzf-extras.sh" ]] \
+# source fzf key bindings
+[[ -f "/usr/share/doc/fzf/key-bindings.bash" ]] \
+  && source /usr/share/doc/fzf/key-bindings.bash
+# source fzf functions
+[[ -f "$HOME/.fzf-extras/fzf-extras.sh" ]] \
   && source "$HOME/.fzf-extras/fzf-extras.sh"
 
 # end fzf }}}
