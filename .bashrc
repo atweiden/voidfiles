@@ -471,8 +471,12 @@ for _fn in $(find "$HOME/.functions.d" -type f -name "*.sh"); do source "$_fn"; 
 # ==============================================================================
 # voidinfo {{{
 
-if [[ -x "$HOME/.bin/voidinfo" ]]; then
-  if ! [[ "$UID" == '0' ]]; then voidinfo; else voidinfo -c red; fi
+if [[ -x "$HOME/.bin/voidinfo" ]] && [[ -z "$VIMRUNTIME" ]]; then
+  if ! [[ "$UID" == '0' ]]; then
+    voidinfo
+  else
+    voidinfo -c red
+  fi
 fi
 
 # end voidinfo }}}
