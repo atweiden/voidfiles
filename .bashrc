@@ -556,6 +556,12 @@ export GPG_TTY
 
 # end gpg }}}
 # ==============================================================================
+# screen {{{
+
+export SCREENRC="$HOME/.config/screen/screenrc"
+
+# end screen }}}
+# ==============================================================================
 # pg {{{
 
 export PSQLRC="$HOME/.config/pg/psqlrc"
