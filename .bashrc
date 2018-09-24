@@ -145,7 +145,7 @@ PATH="$HOME/.bin:$PATH"
 # --- end dotfiles }}}
 # --- perl6 {{{
 
-PATH="/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin:$PATH"
+PATH="$HOME/.perl6/bin:/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin:$PATH"
 
 # --- end perl6 }}}
 
