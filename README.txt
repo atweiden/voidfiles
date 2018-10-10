@@ -1,7 +1,7 @@
 /* vim: set ft=journal fdm=marker fdl=0 nowrap: */
 
-ttyfiles
-========
+Voidfiles
+=========
 
 vim, tmux and fzf config for void tty
 
