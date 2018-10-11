@@ -322,7 +322,7 @@ alias pkg\?='xbps-query --search "$@"'
 # --- end grepping }}}
 # --- ip {{{
 
-INTERFACE="$(ip -o -4 route show to default | awk '/dev/ {print $5}')"
+readonly INTERFACE="$(ip -o -4 route show to default | awk '/dev/ {print $5}')"
 alias macaddr="ip -0 addr show dev $INTERFACE \
   | awk '/link/ && /ether/ {print \$2}' \
   | tr '[:upper:]' '[:lower:]'"
