@@ -322,7 +322,7 @@ alias pkg\?='xbps-query --search "$@"'
 # --- end grepping }}}
 # --- ip {{{
 
-export INTERFACE="$(ip -o -4 route show to default | awk '/dev/ {print $5}')"
+export INTERFACE="$(interface)"
 
 # --- end ip }}}
 # --- irssi {{{
