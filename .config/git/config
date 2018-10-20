@@ -10,6 +10,9 @@
   attributesfile = "~/.config/git/attributes"
   excludesfile = "~/.config/git/ignore"
 
+[gpg]
+  program = gpg2
+
 [alias]
   br = branch
   ci = commit
