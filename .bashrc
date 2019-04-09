@@ -548,6 +548,11 @@ alias :e='"$EDITOR"'
   && alias wget='wget --hsts-file=$HOME/.config/wget/wget-hsts'
 
 # --- end wget }}}
+# --- xyz {{{
+
+alias ,='clear'
+
+# --- end xyz }}}
 
 # end aliases }}}
 # ==============================================================================
