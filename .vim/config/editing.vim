@@ -189,7 +189,7 @@ set formatoptions=rqn2l1j
 if executable('rg')
   set grepprg=rg\ --vimgrep\ --no-heading\ --color\ never\ --hidden\ --smart-case\ --ignore-vcs
 elseif executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor\ --hidden\ --smart-case\ --path-to-ignore\ $HOME/.ignore \ --skip-vcs-ignores
+  set grepprg=ag\ --nogroup\ --nocolor\ --hidden\ --smart-case\ --path-to-ignore\ $HOME/.ignore\ --skip-vcs-ignores
 elseif executable('pt')
   set grepprg=pt\ --nogroup\ --nocolor\ --hidden\ --nocolor\ -e
 elseif executable('ack')
@@ -207,10 +207,7 @@ augroup END
 " return to last edit position
 augroup cursormem
   autocmd!
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
+  autocmd BufReadPost * call ReturnToLastEditPosition()
 augroup END
 
 " dictionary and spelling
