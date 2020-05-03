@@ -409,14 +409,6 @@ alias ps='ps --forest'
 alias r='repl'
 
 # --- end repl }}}
-# --- subrepo {{{
-
-[[ -n "$_has_subgit" ]] \
-  && alias sg='subgit'
-[[ -n "$_has_subhg" ]] \
-  && alias shg='subhg'
-
-# --- end subrepo }}}
 # --- safety {{{
 
 alias cp='cp -i'
@@ -438,6 +430,14 @@ alias timer='echo "Timer started. Stop with Ctrl-D." \
   && date'
 
 # --- end stopwatch }}}
+# --- subrepo {{{
+
+[[ -n "$_has_subgit" ]] \
+  && alias sg='subgit'
+[[ -n "$_has_subhg" ]] \
+  && alias shg='subhg'
+
+# --- end subrepo }}}
 # --- text {{{
 
 alias hr='printf "$(printf "\e["$(shuf -i 91-97 -n 1)";1m%%%ds\e[0m\n" "$(tput cols)")" \
