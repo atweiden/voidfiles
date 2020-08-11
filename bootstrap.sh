@@ -139,7 +139,7 @@ rsync "${_rsync_opts[@]}" "$DIR/" "$HOME"
 # -----------------------------------------------------------------------------
 
 sed -i "s#yourname#$name#"         "$HOME/.config/git/config"
-sed -i "s#youremail#$email#"       "$HOME/.config/git/config"
+sed -i "s#youremail#$email#g"      "$HOME/.config/git/config"
 sed -i "s#githubusername#$github#" "$HOME/.config/git/config"
 sed -i "s#yourname#$name#"         "$HOME/.config/hg/hgrc"
 sed -i "s#youremail#$email#"       "$HOME/.config/hg/hgrc"
