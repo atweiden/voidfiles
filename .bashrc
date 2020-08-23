@@ -246,6 +246,12 @@ export PS1
 # ==============================================================================
 # aliases {{{
 
+# --- bash {{{
+
+alias incognito=' unset HISTFILE'
+alias ,='clear'
+
+# --- end bash }}}
 # --- curl {{{
 
 [[ -n "$_has_curl" ]] \
@@ -375,11 +381,6 @@ fi
   && alias locate='locate --ignore-case'
 
 # --- end grepping }}}
-# --- history {{{
-
-alias incognito=' unset HISTFILE'
-
-# --- end history }}}
 # --- info {{{
 
 alias info='info --vi-keys'
@@ -585,11 +586,6 @@ fi
     --hsts-file=$HOME/.config/wget/wget-hsts'
 
 # --- end wget }}}
-# --- xyz {{{
-
-alias ,='clear'
-
-# --- end xyz }}}
 
 # end aliases }}}
 # ==============================================================================
