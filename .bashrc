@@ -743,8 +743,8 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' \
   --bind ?:toggle-preview"
 
 # source fzf completions
-[[ -r '/usr/share/bash-completion/completions/fzf' ]] \
-  && source /usr/share/bash-completion/completions/fzf
+[[ -r '/usr/share/doc/fzf/completion.bash' ]] \
+  && source /usr/share/doc/fzf/completion.bash
 # source fzf key bindings
 [[ -r '/usr/share/doc/fzf/key-bindings.bash' ]] \
   && source /usr/share/doc/fzf/key-bindings.bash
