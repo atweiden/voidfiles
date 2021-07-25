@@ -28,9 +28,6 @@
   # https://git-scm.com/docs/git-update-index#_untracked_cache
   untrackedCache = true
 
-[gpg]
-  program = gpg2
-
 [init]
   # explicitly set the default branch name to master
   # https://git-scm.com/docs/git-config#Documentation/git-config.txt-initdefaultBranch
