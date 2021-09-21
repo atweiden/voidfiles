@@ -754,6 +754,12 @@ export PGPASSFILE="$HOME/.config/pg/pgpass"
 export PGSERVICEFILE="$HOME/.config/pg/pg_service.conf"
 
 # --- end postgresql }}}
+# --- python {{{
+
+# don’t write .pyc files
+export PYTHONDONTWRITEBYTECODE=1
+
+# --- end python }}}
 # --- raku {{{
 
 export RAKUDO_HOME='/usr/lib/raku'
