@@ -708,6 +708,7 @@ export GERBIL_HOME='/usr/lib/gerbil'
 export GOPATH="$HOME/.go"
 export GOCACHE="$GOPATH/cache"
 export GOENV="$GOPATH/env"
+export GOPROXY="direct"
 
 # --- end go }}}
 # --- gpg {{{
